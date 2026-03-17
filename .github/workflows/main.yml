@@ -37,7 +37,6 @@ jobs:
         run: npm install --legacy-peer-deps
 
       - name: Build
-        # The --base-href flag is crucial for GitHub Pages project sites to resolve assets correctly
         run: npx ng build --base-href /${{ github.event.repository.name }}/
 
       - name: Setup Pages
