@@ -34,7 +34,7 @@ jobs:
           node-version: '20'
 
       - name: Install dependencies
-        run: npm install
+        run: npm install --legacy-peer-deps
 
       - name: Build
         # The --base-href flag is crucial for GitHub Pages project sites to resolve assets correctly
