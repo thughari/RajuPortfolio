@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8" />
+  <title>Raju Bandaram | Senior Data Engineer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      background-color: #0f172a; /* bg-slate-900 */
+      color: #cbd5e1; /* text-slate-300 */
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background-color: #334155; /* bg-slate-700 */
+      transform: translateX(-50%);
+    }
+    .timeline-item:nth-child(odd) .timeline-content {
+      margin-left: calc(50% + 2rem);
+      text-align: left;
+    }
+    .timeline-item:nth-child(even) .timeline-content {
+      margin-right: calc(50% + 2rem);
+      text-align: right;
+    }
+    .timeline-dot {
+      position: absolute;
+      left: 50%;
+      top: 1rem;
+      transform: translateX(-50%);
+    }
+    @media (max-width: 768px) {
+      .timeline::before {
+        left: 8px;
+      }
+      .timeline-item:nth-child(odd) .timeline-content,
+      .timeline-item:nth-child(even) .timeline-content {
+        margin-left: 32px;
+        margin-right: 0;
+        text-align: left;
+      }
+      .timeline-dot {
+        left: 8px;
+      }
+    }
+  </style>
+</head>
+<body class="antialiased">
+  <app-root></app-root>
+</body>
+</html>

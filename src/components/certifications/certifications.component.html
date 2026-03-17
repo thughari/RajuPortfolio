@@ -1,0 +1,20 @@
+
+<section id="certifications" class="py-24">
+  <div class="text-center mb-12">
+    <h2 class="text-4xl font-extrabold text-white">Certifications</h2>
+    <p class="text-slate-400 mt-2">My professional credentials and qualifications.</p>
+  </div>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+    @for (cert of certifications; track cert.name) {
+      <div class="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 text-center shadow-2xl border border-slate-700 transform hover:-translate-y-2 transition-transform duration-300">
+        <div class="text-cyan-400 mx-auto mb-4 h-16 w-16 flex items-center justify-center rounded-full bg-slate-700">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+        </div>
+        <h3 class="text-xl font-bold text-white">{{ cert.name }}</h3>
+        <p class="text-slate-400 mt-1">{{ cert.issuer }}</p>
+      </div>
+    }
+  </div>
+</section>
